@@ -147,7 +147,7 @@ Now that the requirements are satisfied, you can install Spaceship ZSH via any o
 ### [npm]
 
 ```
-npm install -g spaceship-prompt
+npm install -g spaceship-prompt-async
 ```
 
 Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to your `$fpath` and set `prompt spaceship` in `.zshrc`. Just reload your terminal.
