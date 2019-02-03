@@ -29,15 +29,17 @@ spaceship_async_job_ruby() {
   # Show versions only for Ruby-specific folders
   test -f Gemfile || test -f Rakefile || test -f (../)#.ruby-version || test -n *.rb(#qN^/) || return
 
-  local ruby_version
-  if spaceship::exists rvm; then
-    ruby_version=$(rvm current)
+  local 'ruby_version'
+
+  if spaceship::exists rvm-prompt; then
+    ruby_version=$(rvm-prompt i v g)
   elif spaceship::exists chruby; then
     ruby_version=$(chruby | sed -n -e 's/ \* //p')
   elif spaceship::exists rbenv; then
     ruby_version=$(rbenv version-name)
   elif spaceship::exists asdf; then
-    ruby_version=$(asdf current ruby | awk '{print $1}')
+    # split output on space and return first element
+    ruby_version=${$(asdf current ruby)[1]}
   else
     return
   fi
