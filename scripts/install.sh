@@ -26,7 +26,7 @@ fi
 # ------------------------------------------------------------------------------
 
 ZSHRC="$HOME/.zshrc"
-REPO='https://github.com/denysdovhan/spaceship-prompt.git'
+REPO='https://github.com/narma/spaceship-prompt-async.git'
 SOURCE="$PWD/spaceship.zsh"
 USER_SOURCE="$HOME/.spaceship-prompt"
 DEST='/usr/local/share/zsh/site-functions'
