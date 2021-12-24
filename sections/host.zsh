@@ -12,6 +12,7 @@ SPACESHIP_HOST_PREFIX="${SPACESHIP_HOST_PREFIX="at "}"
 SPACESHIP_HOST_SUFFIX="${SPACESHIP_HOST_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
 SPACESHIP_HOST_COLOR="${SPACESHIP_HOST_COLOR="blue"}"
 SPACESHIP_HOST_COLOR_SSH="${SPACESHIP_HOST_COLOR_SSH="green"}"
+SPACESHIP_HOST_COLOR_PREFIX="${SPACESHIP_HOST_COLOR_PREFIX="white"}"
 
 # ------------------------------------------------------------------------------
 # Section
@@ -41,6 +42,7 @@ spaceship_host() {
       "$host_color" \
       "$SPACESHIP_HOST_PREFIX" \
       "$host" \
-      "$SPACESHIP_HOST_SUFFIX"
+      "$SPACESHIP_HOST_SUFFIX" \
+      "$SPACESHIP_HOST_COLOR_PREFIX"
   fi
 }
